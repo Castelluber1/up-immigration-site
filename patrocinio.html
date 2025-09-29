@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patrocínio Conjugal no Canadá | Up Immigration</title>
+  <meta name="description" content="Landing page para brasileiros no Canadá que desejam solicitar patrocínio conjugal com suporte profissional da Up Immigration." />
+  <style>
+    :root {
+      --brand: #B8001C; /* Up red */
+      --brand-700: #990016;
+      --dark: #0a0c0f;
+      --light: #ffffff;
+      --muted: #62656f;
+      --surface: #f7f8fa;
+      --radius: 14px;
+      --shadow: 0 8px 28px rgba(10, 12, 15, 0.08);
+      --maxw: 1100px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--dark); background: var(--light); }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-block; padding: 14px 22px; border-radius: 12px; font-weight: 600; text-align: center; box-shadow: var(--shadow); transition: transform .08s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:active { background: var(--brand-700); }
+    .btn-outline { background: #fff; border: 2px solid var(--brand); color: var(--brand); }
+
+    /* Header */
+    header { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px); background: rgba(255,255,255,.9); border-bottom: 1px solid rgba(0,0,0,.06); z-index: 20; }
+    header .bar { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .logo-badge { width: 36px; height: 36px; border-radius: 9px; background: var(--brand); display: grid; place-items: center; color: #fff; font-weight: 800; }
+    nav a { font-weight: 600; color: var(--muted); margin-left: 18px; }
+    nav a:hover { color: var(--brand); }
+
+    /* Hero */
+    .hero { background: linear-gradient(180deg, #fff 0%, #fff 55%, #f9fafc 100%); }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 36px; padding: 52px 0; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: #ffeef1; color: var(--brand); border: 1px solid #ffd6dc; padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 12px; letter-spacing: .4px; text-transform: uppercase; }
+    h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 14px 0 12px; }
+    .subtitle { font-size: clamp(15px, 1.8vw, 18px); color: var(--muted); margin-bottom: 20px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
+    .badges { display: flex; gap: 12px; margin-top: 18px; align-items: center; color: var(--muted); font-size: 14px; }
+    .badge { background: #fff; border: 1px solid #eee; border-radius: 999px; padding: 6px 10px; }
+    .hero-card { background: #fff; border: 1px solid #eee; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+    .hero-card h3 { margin: 0 0 12px; }
+    .hero-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+
+    /* hero media helpers */
+    .hero-media { display: grid; gap: 14px; }
+    .hero-media img { width: 100%; border-radius: var(--radius); border: 1px solid #eee; box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4 / 3; }
+
+    /* Social proof */
+    .proof { padding: 30px 0; background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+    .logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; filter: grayscale(100%); opacity: .9; }
+    .logos div { background: #fafafa; border: 1px solid #eee; border-radius: 10px; height: 58px; display: grid; place-items: center; font-size: 13px; color: #999; }
+
+    /* Sections */
+    section { padding: 56px 0; }
+    h2 { font-size: clamp(24px, 3vw, 32px); margin: 0 0 12px; }
+    p.lead { color: var(--muted); margin: 0 0 18px; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+    .card { background: #fff; border: 1px solid #eee; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+
+    /* Steps */
+    .steps { counter-reset: step; display: grid; gap: 16px; }
+    .step { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: start; background: #fff; border: 1px solid #eee; border-radius: var(--radius); padding: 16px; }
+    .step::before { counter-increment: step; content: counter(step); width: 36px; height: 36px; border-radius: 10px; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; margin-top: 4px; }
+
+    /* Steps – overrides for timeline */
+    .steps { position: relative; counter-reset: step; margin: 20px auto; max-width: 980px; padding: 10px 0; display:block; }
+    .steps::before { content: ""; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 4px; height: 100%; background: #eceff3; border-radius: 2px; }
+    .step { position: relative; width: 50%; padding: 16px 26px; box-sizing: border-box; background: transparent; border: none; box-shadow: none; display:block; }
+    .step strong { display: block; margin-bottom: 6px; }
+    .step::before { counter-increment: step; content: counter(step); position: absolute; top: 8px; width: 36px; height: 36px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; box-shadow: var(--shadow); }
+    .step:nth-child(odd) { left: 0; text-align: right; }
+    .step:nth-child(odd)::before { right: -18px; }
+    .step:nth-child(even) { left: 50%; }
+    .step:nth-child(even)::before { left: -18px; }
+    @media (max-width: 920px) {
+      .steps::before { display: none; }
+      .step { width: 100%; left: 0 !important; text-align: left !important; padding-left: 56px; }
+      .step::before { left: 8px !important; right: auto !important; }
+    }
+
+    /* Price */
+    .price { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: stretch; }
+    .price .big { font-size: 38px; font-weight: 800; color: var(--brand); }
+    .price small { color: var(--muted); font-weight: 500; }
+
+    /* FAQ */
+    .faq { display: grid; gap: 12px; }
+    .faq details { border: 1px solid #eee; border-radius: var(--radius); padding: 14px 16px; background: #fff; }
+    .faq summary { cursor: pointer; font-weight: 700; }
+    .faq p { margin: 10px 0 0; color: var(--muted); }
+
+    /* Foot */
+    footer { background: #0b0d10; color: #cfd3da; }
+    footer a { color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 920px) {
+      .hero .wrap, .grid-2, .price { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .proof .logos { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container bar">
+      <div class="logo">
+        <div class="logo-badge">UP</div>
+        <div>Up Immigration Consulting</div>
+      </div>
+      <nav>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#quem-pode">Quem pode</a>
+        <a href="#preco">Consulta</a>
+        <a href="#faq">Perguntas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="eyebrow">Patrocínio Conjugal no Canadá</span>
+          <h1>Brasileiros no Canadá: dê o próximo passo para o PR através do patrocínio conjugal</h1>
+          <p class="subtitle">Atendimento consultivo em português com orientação de RCIC. Sem enrolação. Plano claro do que fazer, quando fazer e como evitar erros que atrasam sua vida no Canadá.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noopener">Agendar consulta</a>
+            <a class="btn btn-outline" href="https://wa.me/15555555555" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </div>
+    
+        </div>
+        <div class="hero-media">
+          <img src="casal.png" alt="Imagem ilustrativa de casal no Canadá" />
+          <div class="hero-card">
+            <h3>Na consulta você recebe</h3>
+            <ul>
+              <li>Avaliação do perfil do casal e caminhos possíveis</li>
+              <li>Checklist objetivo do que reunir primeiro</li>
+              <li>Riscos, prazos típicos e próximos passos realistas</li>
+              <li>Orçamento por etapas, em dólares canadenses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / PLACEHOLDERS -->
+    <div class="proof">
+      <div class="container">
+        <div class="logos">
+          <div><img src="https://placehold.co/140x58?text=RCIC" alt="Selo RCIC" /></div>
+          <div><img src="https://placehold.co/160x58?text=Google+Reviews" alt="Google Reviews" /></div>
+          <div><img src="https://placehold.co/160x58?text=Parceiros" alt="Parceiros Educacionais" /></div>
+          <div><img src="https://placehold.co/160x58?text=HR" alt="Workplace HR" /></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- DOR → SOLUÇÃO -->
+    <section id="dor-solucao">
+      <div class="container grid-2">
+        <div class="card">
+          <h2>Os desafios comuns</h2>
+          <p class="lead">Muitos casais já moram juntos no Canadá, mas travam na papelada. Falta de clareza custa tempo e dinheiro.</p>
+          <ul>
+            <li>Incerteza sobre quem patrocinar e quando iniciar</li>
+            <li>Dúvidas sobre união estável, casamento civil e provas</li>
+            <li>Medo de recusar por documentação fraca ou formulários errados</li>
+            <li>Estratégia para status atual enquanto o processo anda</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Como ajudamos</h2>
+          <p class="lead">Processo claro, comunicação humana e foco no que o oficial precisa ver.</p>
+          <ul>
+            <li>Roteiro do caso por etapas com prazos e responsabilidades</li>
+            <li>Modelos e orientações para cartas e comprovações</li>
+            <li>Revisões técnicas antes de enviar</li>
+            <li>Suporte em eventuais pedidos de esclarecimento</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="container">
+        <h2>Como funciona com a Up Immigration</h2>
+        <p class="lead">Etapas objetivas para você se sentir no controle do processo.</p>
+        <div class="steps">
+          <div class="step">
+            <div></div>
+            <div>
+              <strong>Consulta inicial</strong>
+              <p>Revisamos elegibilidade, caminhos e riscos. Você sai com um plano de ação e orçamento por etapa.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div></div>
+            <div>
+              <strong>Organização de evidências</strong>
+              <p>Lista objetiva do que reunir primeiro. Orientação sobre cartas, comprovações e formato dos arquivos.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div></div>
+            <div>
+              <strong>Preenchimento e revisão</strong>
+              <p>Conferência técnica dos formulários e do pacote. Evitamos erros que geram devolução ou atraso.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div></div>
+            <div>
+              <strong>Envio e acompanhamento</strong>
+              <p>Protocolo feito, monitoramos eventuais pedidos do governo e orientamos suas respostas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM PODE / ELEGIBILIDADE GERAL -->
+    <section id="quem-pode">
+      <div class="container grid-2">
+        <div>
+          <h2>Quem costuma se encaixar</h2>
+          <p class="lead">Informação geral para ajudar na triagem. Cada caso é único e a decisão é do governo canadense.</p>
+          <ul>
+            <li>Cônjuges ou parceiros em união estável de cidadão canadense ou residente permanente</li>
+            <li>Relacionamento genuíno, contínuo e comprovável</li>
+            <li>Sem barreiras de inadmissibilidade relevantes</li>
+          </ul>
+          <p class="lead">Se você já está no Canadá, existe a via de <em>inland</em>. Se estiver fora, a via de <em>outland</em>. Discutimos prós e contras na consulta.</p>
+        </div>
+        <div class="card">
+          <img src="https://placehold.co/520x320?text=Documentos+e+Provas" alt="Ilustração de documentos e provas" style="width:100%; border-radius:12px; border:1px solid #eee; margin-bottom:12px;" />
+          <h3>Importante</h3>
+          <p class="lead">Esta página é informativa. Não é aconselhamento legal. A consulta é o espaço para analisar o seu caso e orientar com precisão.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREÇO / CONSULTA -->
+    <section id="preco" style="background: linear-gradient(180deg, #fff 0%, #fff 40%, #f7f8fa 100%);">
+      <div class="container price">
+        <div class="card">
+          <h2>Consulta de Imigração</h2>
+          <p class="lead">Conversa estratégica em português com RCIC. Duração média de 50 minutos.</p>
+          <div class="big">$150 <small>CAD</small></div>
+          <ul>
+            <li>Plano de ação do patrocínio conjugal</li>
+            <li>Mapa de documentos prioritários</li>
+            <li>Estimativa de prazos e taxas governamentais</li>
+            <li>Orçamento por etapa do serviço</li>
+          </ul>
+          <div class="hero-ctas" style="margin-top: 12px;">
+            <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noopener">Agendar consulta</a>
+            <a class="btn btn-outline" href="https://wa.me/15555555555" target="_blank" rel="noopener">Tirar dúvidas rápidas</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Serviços por etapa</h3>
+          <p class="lead">Para muitos casais, dividir em etapas ajuda no orçamento e no foco.</p>
+          <ul>
+            <li>Preparação e curadoria de evidências</li>
+            <li>Preenchimento e revisão técnica do pacote</li>
+            <li>Envio e acompanhamento</li>
+            <li>Resposta a pedidos de esclarecimento, se houver</li>
+          </ul>
+          <p class="lead">Falamos de valores em CAD e timeline de cada etapa na consulta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq">
+          <details>
+            <summary>União estável vale para patrocínio conjugal?</summary>
+            <p>Depende das provas de convivência e do contexto do relacionamento. Na consulta alinhamos o que costuma ajudar a demonstrar relação genuína.</p>
+          </details>
+          <details>
+            <summary>Quanto tempo leva?</summary>
+            <p>Varia por perfil e por fila do governo. Na consulta estimamos com base no cenário atual e consideramos estratégias para o seu status enquanto espera.</p>
+          </details>
+          <details>
+            <summary>Posso trabalhar ou estudar enquanto aguardo?</summary>
+            <p>Depende do seu status e da via escolhida. Avaliamos cenários na consulta e explicamos opções possíveis.</p>
+          </details>
+          <details>
+            <summary>Quais documentos preciso?</summary>
+            <p>Evite checklists genéricos. Entregamos uma lista objetiva e personalizada após entender seu caso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section>
+      <div class="container card">
+        <div class="grid-2" style="align-items:center;">
+          <div>
+            <h2>Vamos construir seu caminho para o PR com segurança</h2>
+            <p class="lead">Atendimento humano, em português, com plano claro. Comece pela consulta.</p>
+          </div>
+          <div class="hero-ctas" style="justify-content:flex-end;">
+            <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noopener">Agendar consulta</a>
+            <a class="btn btn-outline" href="https://wa.me/15555555555" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="padding: 28px 0; display: grid; gap: 6px;">
+      <div style="font-weight:700;">Up Immigration Consulting</div>
+      <div>Este conteúdo é informativo. A orientação específica acontece na consulta com RCIC. Preços em dólares canadenses.</div>
+      <div style="font-size: 14px; color:#9aa1ac;">© <span id="y"></span> Up Immigration Consulting. Vancouver, BC, Canada.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza ano do rodapé
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

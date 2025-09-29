@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Up Immigration Consulting – Your Canadian Dream Starts Here</title>
+		<!-- Google Fonts: use only two weights to improve performance -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+			rel="stylesheet" />
+		<style>
+			:root {
+				--brand: #b8001c;
+				--dark: #101114;
+				--light: #ffffff;
+				--gray: #f5f5f5;
+				--muted: #62656f;
+				--radius: 12px;
+				--max-width: 1280px;
+			}
+			html {
+				box-sizing: border-box;
+				scroll-behavior: smooth;
+			}
+			*,
+			*::before,
+			*::after {
+				box-sizing: inherit;
+			}
+			body {
+				margin: 0;
+				font-family: "Poppins", sans-serif;
+				color: var(--dark);
+				background-color: var(--light);
+				line-height: 1.6;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			/* Header */
+			header {
+				position: sticky;
+				top: 0;
+				width: 100%;
+				z-index: 100;
+				background-color: var(--light);
+				border-bottom: 1px solid #eaeaea;
+			}
+			.nav-container {
+				max-width: var(--max-width);
+				margin: 0 auto;
+				padding: 0 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 64px;
+			}
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-weight: 700;
+				color: var(--brand);
+				font-size: 1.4rem;
+			}
+			.logo img {
+				height: 32px;
+				width: auto;
+			}
+			nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				gap: 1.2rem;
+				align-items: center;
+			}
+			nav li {
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+			nav li.cta-nav a {
+				padding: 0.5rem 1rem;
+				background: var(--brand);
+				color: var(--light);
+				border-radius: var(--radius);
+				font-weight: 600;
+				transition: background 0.2s;
+			}
+			nav li.cta-nav a:hover {
+				background: #a50019;
+			}
+			.social-links {
+				display: flex;
+				gap: 0.8rem;
+				align-items: center;
+			}
+			.social-links svg {
+				height: 20px;
+				width: 20px;
+				fill: var(--dark);
+				transition: fill 0.2s;
+			}
+			.social-links a:hover svg {
+				fill: var(--brand);
+			}
+			/* Mobile nav */
+			.mobile-toggle {
+				display: none;
+				background: none;
+				border: none;
+				font-size: 1.5rem;
+			}
+			@media (max-width: 768px) {
+				nav ul {
+					position: fixed;
+					top: 64px;
+					right: -100%;
+					width: 260px;
+					height: calc(100vh - 64px);
+					background: var(--light);
+					box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+					flex-direction: column;
+					padding: 1rem;
+					gap: 1rem;
+					transition: right 0.3s ease;
+				}
+				nav ul.open {
+					right: 0;
+				}
+				.mobile-toggle {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					cursor: pointer;
+				}
+				.social-links {
+					display: none;
+				}
+			}
+
+			/* Hero */
+			.hero {
+				position: relative;
+				min-height: 75vh;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				color: var(--light);
+				overflow: hidden;
+			}
+			.hero::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				/* Hero background updated to original mountain/lake for reliable loading */
+				background-image: url("https://images.squarespace-cdn.com/content/v1/6411c2c7517af91ccaa09564/e9819787-b7ca-49dd-aaca-065db7e87382/upimmigration-background-mountains-lake+%281%29.jpg?format=1500w");
+				background-size: cover;
+				background-position: center;
+				filter: brightness(0.55);
+				z-index: -1;
+				/* Subtle zoom animation to add movement */
+				animation: heroZoom 30s ease-in-out infinite alternate;
+			}
+
+			/* Animated gradient overlay on hero */
+			.hero::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					120deg,
+					rgba(184, 0, 28, 0.6),
+					rgba(184, 0, 28, 0.1),
+					rgba(184, 0, 28, 0.6)
+				);
+				background-size: 200% 200%;
+				animation: gradientMove 15s ease infinite;
+				z-index: -1;
+			}
+
+			@keyframes gradientMove {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+
+			/* Hero background zoom keyframes */
+			@keyframes heroZoom {
+				from {
+					transform: scale(1);
+				}
+				to {
+					transform: scale(1.1);
+				}
+			}
+			.hero-content {
+				max-width: var(--max-width);
+				margin: 0 auto;
+				padding: 2rem;
+				text-align: left;
+			}
+			.hero h1 {
+				font-size: 2.6rem;
+				font-weight: 700;
+				margin: 0 0 1rem;
+				line-height: 1.2;
+			}
+			.hero p.subhead {
+				font-size: 1.1rem;
+				margin-bottom: 2rem;
+				max-width: 600px;
+			}
+			.hero-buttons {
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+			.btn {
+				display: inline-block;
+				padding: 0.75rem 1.5rem;
+				border-radius: var(--radius);
+				font-weight: 600;
+				font-size: 1rem;
+				transition: background 0.2s, color 0.2s;
+			}
+			.btn-primary {
+				background: var(--brand);
+				color: var(--light);
+			}
+			.btn-primary:hover {
+				background: #a50019;
+			}
+
+			/* Pulse animation for hero primary CTA */
+			@keyframes pulse {
+				0% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.05);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+			.btn-hero {
+				animation: pulse 2.5s ease-in-out infinite;
+			}
+			.btn-outline {
+				background: transparent;
+				border: 2px solid var(--brand);
+				color: var(--brand);
+			}
+			.btn-outline:hover {
+				background: var(--brand);
+				color: var(--light);
+			}
+
+			/* Trust badges */
+			.trust-badges {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 1.5rem;
+				margin-top: -2rem;
+				padding: 1rem 2rem;
+				background: var(--light);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+				border-radius: var(--radius);
+				position: relative;
+				z-index: 10;
+			}
+			.trust-badge {
+				display: flex;
+				align-items: center;
+				gap: 0.6rem;
+				font-size: 0.9rem;
+				color: var(--dark);
+			}
+			.trust-badge svg {
+				width: 20px;
+				height: 20px;
+				fill: var(--brand);
+			}
+
+			/* Reveal animation */
+			.reveal {
+				opacity: 0;
+				transform: translateY(40px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+			.reveal.revealed {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* Newsletter */
+			.newsletter {
+				max-width: 600px;
+				margin: 2rem auto 0;
+				text-align: center;
+			}
+			.newsletter p {
+				margin-bottom: 1rem;
+				color: var(--dark);
+				font-size: 1rem;
+			}
+			.newsletter-form {
+				display: flex;
+				justify-content: center;
+				gap: 0.5rem;
+			}
+			.newsletter-form input[type="email"] {
+				padding: 0.6rem 1rem;
+				border: 1px solid #ccc;
+				border-radius: var(--radius);
+				font-size: 0.9rem;
+				flex: 1;
+				min-width: 220px;
+			}
+			.newsletter-form button {
+				padding: 0.6rem 1.4rem;
+				border: none;
+				border-radius: var(--radius);
+				background: var(--brand);
+				color: var(--light);
+				font-weight: 600;
+				cursor: pointer;
+				transition: background 0.2s;
+			}
+			.newsletter-form button:hover {
+				background: #a50019;
+			}
+
+			/* Trusted Section */
+			.trusted {
+				padding: 4rem 1rem;
+				max-width: var(--max-width);
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+				align-items: center;
+			}
+			.trusted-text h2 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			.trusted-text p {
+				margin-bottom: 1.5rem;
+				color: var(--muted);
+			}
+			.trusted-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.trusted-list li {
+				display: flex;
+				align-items: flex-start;
+				gap: 0.5rem;
+				margin-bottom: 0.75rem;
+			}
+			.trusted-list li span.icon {
+				color: var(--brand);
+				font-size: 1.2rem;
+			}
+			.trusted-image {
+				text-align: center;
+			}
+			.trusted-image img {
+				max-width: 100%;
+				height: auto;
+				border-radius: var(--radius);
+			}
+			@media (max-width: 900px) {
+				.trusted {
+					grid-template-columns: 1fr;
+				}
+				.trusted-image {
+					order: -1;
+				}
+			}
+
+			/* Services Section */
+			.services {
+				padding: 4rem 1rem;
+				background-color: var(--gray);
+			}
+			.services h2 {
+				text-align: center;
+				margin-bottom: 2rem;
+				font-size: 2rem;
+			}
+			.service-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 1.5rem;
+				max-width: var(--max-width);
+				margin: 0 auto;
+			}
+			.service-card {
+				background: var(--light);
+				border-radius: var(--radius);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				transition: transform 0.2s;
+			}
+			.service-card:hover {
+				transform: translateY(-4px);
+			}
+			.service-card img {
+				width: 100%;
+				height: 160px;
+				object-fit: cover;
+			}
+			.service-card .card-body {
+				padding: 1rem;
+				flex-grow: 1;
+			}
+			.service-card h3 {
+				margin: 0 0 0.5rem;
+				font-size: 1.2rem;
+				color: var(--brand);
+			}
+			.service-card p {
+				margin: 0;
+				color: var(--muted);
+				font-size: 0.9rem;
+			}
+			.service-card .card-body a {
+				display: inline-block;
+				margin-top: 1rem;
+				font-size: 0.9rem;
+				color: var(--brand);
+				font-weight: 600;
+			}
+			.service-card .card-body a:hover {
+				text-decoration: underline;
+			}
+
+			/* Testimonials Section */
+			.testimonials {
+				padding: 4rem 1rem;
+			}
+			.testimonials h2 {
+				text-align: center;
+				margin-bottom: 2rem;
+				font-size: 2rem;
+			}
+			.testimonial-slider {
+				max-width: var(--max-width);
+				margin: 0 auto;
+				position: relative;
+				height: auto;
+			}
+			.testimonial-slider .testimonial-card {
+				background: var(--light);
+				border-radius: var(--radius);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+				padding: 1.5rem;
+				display: none;
+				flex-direction: column;
+				gap: 0.8rem;
+				width: 100%;
+			}
+			.testimonial-slider .testimonial-card.active {
+				display: flex;
+			}
+			.testimonial-card .stars {
+				color: #f5a623;
+				font-size: 1.1rem;
+			}
+			.testimonial-card p {
+				margin: 0;
+				font-size: 0.95rem;
+				color: var(--dark);
+			}
+			.testimonial-card .author-info {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				margin-top: auto;
+			}
+			.testimonial-card .author-info img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+			.testimonial-card .author-info .author-name {
+				font-weight: 600;
+				font-size: 0.9rem;
+			}
+
+			/* Next Steps Section */
+			.next-steps {
+				padding: 4rem 1rem;
+				background: var(--gray);
+			}
+			.next-steps h2 {
+				text-align: center;
+				margin-bottom: 2rem;
+				font-size: 2rem;
+			}
+			.timeline {
+				max-width: var(--max-width);
+				margin: 0 auto;
+				position: relative;
+				padding-left: 2rem;
+				border-left: 2px solid var(--brand);
+			}
+			.timeline-step {
+				margin-bottom: 2rem;
+				position: relative;
+				padding-left: 2rem;
+			}
+			.timeline-step::before {
+				content: attr(data-step);
+				position: absolute;
+				left: -1.5rem;
+				top: 0;
+				width: 1.5rem;
+				height: 1.5rem;
+				background: var(--brand);
+				color: var(--light);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 600;
+				font-size: 0.8rem;
+			}
+			.timeline-step h3 {
+				margin: 0 0 0.3rem;
+				font-size: 1.2rem;
+				color: var(--brand);
+			}
+			.timeline-step p {
+				margin: 0;
+				font-size: 0.9rem;
+				color: var(--muted);
+			}
+
+			/* Highlight active step in process timeline */
+			.timeline-step.active::before {
+				background: var(--dark);
+				color: var(--light);
+			}
+			.timeline-step.active h3 {
+				color: var(--dark);
+			}
+			.timeline-step.active p {
+				color: var(--dark);
+			}
+
+			/* News Section */
+			.news {
+				padding: 4rem 1rem;
+			}
+			.news h2 {
+				text-align: center;
+				margin-bottom: 2rem;
+				font-size: 2rem;
+			}
+			.news-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+				max-width: var(--max-width);
+				margin: 0 auto;
+			}
+			.news-card {
+				background: var(--light);
+				border-radius: var(--radius);
+				overflow: hidden;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+				display: flex;
+				flex-direction: column;
+			}
+			.news-card img {
+				width: 100%;
+				height: 160px;
+				object-fit: cover;
+			}
+			.news-card .news-body {
+				padding: 1rem;
+				flex-grow: 1;
+			}
+			.news-card h3 {
+				margin: 0 0 0.5rem;
+				font-size: 1.2rem;
+				color: var(--brand);
+			}
+			.news-card p {
+				margin: 0;
+				font-size: 0.9rem;
+				color: var(--muted);
+			}
+			.news-card .news-body a {
+				display: inline-block;
+				margin-top: 1rem;
+				font-size: 0.9rem;
+				color: var(--brand);
+				font-weight: 600;
+			}
+			.news-card .news-body a:hover {
+				text-decoration: underline;
+			}
+
+			/* Footer */
+			footer {
+				background: var(--brand);
+				color: var(--light);
+				padding: 3rem 1rem;
+			}
+
+			.footer-cta {
+				max-width: var(--max-width);
+				margin: 0 auto 2rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 1rem;
+			}
+			.footer-cta h3 {
+				margin: 0;
+				font-size: 1.6rem;
+				font-weight: 600;
+				color: var(--light);
+			}
+			.footer-cta p {
+				margin: 0;
+				font-size: 1rem;
+				color: var(--light);
+			}
+			.footer-cta .btn-footer {
+				display: inline-block;
+				margin-top: 0.5rem;
+				padding: 0.6rem 1.4rem;
+				background: var(--light);
+				color: var(--brand);
+				border-radius: var(--radius);
+				font-weight: 600;
+				transition: background 0.2s;
+			}
+			.footer-cta .btn-footer:hover {
+				background: #f5f5f5;
+			}
+			.footer-content {
+				max-width: var(--max-width);
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: 2rem;
+			}
+			.footer-column h4 {
+				margin-top: 0;
+				margin-bottom: 0.75rem;
+				font-size: 1.1rem;
+			}
+			.footer-column ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.footer-column li {
+				margin-bottom: 0.5rem;
+			}
+			.footer-column a {
+				color: var(--light);
+				font-size: 0.9rem;
+			}
+			.footer-column a:hover {
+				text-decoration: underline;
+			}
+			.footer-bottom {
+				text-align: center;
+				margin-top: 2rem;
+				font-size: 0.85rem;
+			}
+
+			/* Floating WhatsApp */
+			.whatsapp {
+				position: fixed;
+				bottom: 1.5rem;
+				right: 1.5rem;
+				z-index: 100;
+			}
+			.whatsapp a {
+				background: #25d366;
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				transition: transform 0.2s;
+			}
+			.whatsapp a:hover {
+				transform: scale(1.05);
+			}
+			.whatsapp svg {
+				fill: var(--light);
+				width: 28px;
+				height: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="nav-container">
+				<a href="#" class="logo">
+					<img
+						src="https://static1.squarespace.com/static/6411c2c7517af91ccaa09564/t/64a7a555eb5749346340ab99/1688708437745/Up_Immigration_Consulting_LOGO-removebg-preview+%281%29.png?format=1500w"
+						alt="UP Immigration logo" />
+					<span>UP Immigration</span>
+				</a>
+				<button
+					class="mobile-toggle"
+					aria-label="Toggle navigation"
+					onclick="document.querySelector('nav ul').classList.toggle('open')">
+					☰
+				</button>
+				<nav>
+					<ul>
+						<li><a href="#services">Immigrate</a></li>
+						<li><a href="#services">Work</a></li>
+						<li><a href="#services">Study</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#news">Blog</a></li>
+						<li class="cta-nav">
+							<a
+								href="https://upmmigrationconsultation.as.me/?appointmentType=59225498"
+								>Book Consultation</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<div class="social-links">
+					<a href="https://instagram.com" aria-label="Instagram"
+						><svg viewBox="0 0 24 24">
+							<path
+								d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zM12 7.3A4.7 4.7 0 107 12a4.7 4.7 0 005-4.7zm0 7.4A2.7 2.7 0 119.3 12 2.7 2.7 0 0112 14.7zm5.3-7.6a1.1 1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1z" /></svg
+					></a>
+					<a href="https://facebook.com" aria-label="Facebook"
+						><svg viewBox="0 0 24 24">
+							<path
+								d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H17l-.5 3h-2.5v7A10 10 0 0022 12z" /></svg
+					></a>
+					<a href="https://linkedin.com" aria-label="LinkedIn"
+						><svg viewBox="0 0 24 24">
+							<path
+								d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7 19H4V9h3v10zM5.5 7.6a1.7 1.7 0 110-3.4 1.7 1.7 0 010 3.4zm13.5 11.4h-3v-5.5c0-1.3-.7-2.3-2.1-2.3-1 0-1.5.7-1.8 1.4-.1.2-.1.6-.1 1V19h-3s.1-8 0-10h3v1.4a3 3 0 012.7-1.4c2 0 3.6 1.3 3.6 4.1V19z" /></svg
+					></a>
+					<a href="mailto:info@upimmigration.ca" aria-label="Email"
+						><svg viewBox="0 0 24 24">
+							<path
+								d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm0 2l-7 5L5 6h14zm0 10H5V8l7 5 7-5v8z" /></svg
+					></a>
+				</div>
+			</div>
+		</header>
+
+		<section class="hero">
+			<div class="hero-content">
+				<h1>
+					Helping you<br />
+					<span id="typed-word">Achieve your goals </span><br />
+				</h1>
+				<p class="subhead">
+					Navigate Canada’s immigration maze with Larissa — Licensed, trusted,
+					and with over 10 years of success stories.
+				</p>
+				<div class="hero-buttons">
+					<a
+						href="https://upmmigrationconsultation.as.me/?appointmentType=59225498"
+						class="btn btn-primary btn-hero"
+						>Book Your FREE Immigration Roadmap Call</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Trust badges row to build credibility -->
+		<div class="trust-badges reveal">
+			<div class="trust-badge">
+				<!-- Star icon -->
+				<svg viewBox="0 0 24 24">
+					<path
+						d="M12 2l2.9 6.9L22 9l-5.5 5.4L18.8 22 12 18.1 5.2 22 7.5 14.4 2 9l7.1-0.1z"></path>
+				</svg>
+				<span
+					><span class="count" data-target="150">0</span>+ Success Stories</span
+				>
+			</div>
+			<div class="trust-badge">
+				<!-- Certificate icon -->
+				<svg viewBox="0 0 24 24">
+					<path
+						d="M5 2h14a2 2 0 012 2v12a2 2 0 01-2 2h-5l-4 4v-4H5a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v12h5v2.2L14.2 16H19V4H5z"></path>
+				</svg>
+				<span>Licensed RCIC #R710678</span>
+			</div>
+			<div class="trust-badge">
+				<!-- Book/education icon -->
+				<svg viewBox="0 0 24 24">
+					<path
+						d="M4 2h13a3 3 0 013 3v14a3 3 0 01-3 3H4a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v14h13V5H4z"></path>
+				</svg>
+				<span>UBC Immigration Law Certified</span>
+			</div>
+		</div>
+
+		<section class="trusted reveal" id="about">
+			<div class="trusted-text">
+				<h2>Meet Your Trusted Canadian Immigration Expert</h2>
+				<p>
+					Larissa Castelluber is a licensed Regulated Canadian Immigration
+					Consultant (RCIC) who’s helped hundreds of families build new lives in
+					Canada. With over a decade of experience and specialized training in
+					immigration law, she offers the clarity and confidence you need to
+					move forward.
+				</p>
+				<ul class="trusted-list">
+					<li>
+						<span class="icon">✓</span>
+						<div>
+							<strong>RCIC Certified:</strong> Registered with the College of
+							Immigration and Citizenship Consultants (CICC).
+						</div>
+					</li>
+					<li>
+						<span class="icon">✓</span>
+						<div>
+							<strong>10+ Years Experience:</strong> Decade‑long track record
+							guiding families and professionals to Canada.
+						</div>
+					</li>
+					<li>
+						<span class="icon">✓</span>
+						<div>
+							<strong>Specialized Training:</strong> UBC Immigration Law &
+							Policy program graduate.
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="trusted-image">
+				<img
+					src="https://images.unsplash.com/photo-1531378702945-5c0da5b3465f?auto=format&fit=crop&w=800&q=80"
+					alt="Immigration consultant" />
+			</div>
+		</section>
+
+		<section class="services reveal" id="services">
+			<h2>Our Services</h2>
+			<div class="service-grid">
+				<div class="service-card">
+					<img
+						src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
+						alt="Permanent residence" />
+					<div class="card-body">
+						<h3>Permanent Residence</h3>
+						<p>
+							Find the best pathway for Permanent Residency: Express Entry, PNP,
+							Sponsorship.
+						</p>
+						<a href="#contact">Get Started</a>
+					</div>
+				</div>
+				<div class="service-card">
+					<img
+						src="https://images.unsplash.com/photo-1515169067869-d7d0c83faa2c?auto=format&fit=crop&w=800&q=80"
+						alt="Work permits" />
+					<div class="card-body">
+						<h3>Work Permits</h3>
+						<p>
+							Apply for employer-specific or open work permits and extend your
+							status.
+						</p>
+						<a href="#contact">Get Started</a>
+					</div>
+				</div>
+				<div class="service-card">
+					<img
+						src="https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=800&q=80"
+						alt="Study permits" />
+					<div class="card-body">
+						<h3>Study Permits</h3>
+						<p>
+							Get your study permit, PGWP or co-op work authorization with ease.
+						</p>
+						<a href="#contact">Get Started</a>
+					</div>
+				</div>
+				<div class="service-card">
+					<img
+						src="https://images.unsplash.com/photo-1581090700227-1c01c06081c2?auto=format&fit=crop&w=800&q=80"
+						alt="Family & Sponsorship" />
+					<div class="card-body">
+						<h3>Family & Sponsorship</h3>
+						<p>
+							Reunite with your family via spousal, child or parent sponsorship
+							programs.
+						</p>
+						<a href="#contact">Get Started</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonials reveal">
+			<h2>What Clients Are Saying</h2>
+			<div class="testimonial-slider">
+				<div class="testimonial-card">
+					<div class="stars">★★★★★</div>
+					<p>
+						I’m from Mexico, and I received assistance with my work permit and
+						study permit. She was always very responsive and answered every
+						question clearly. Highly recommend her services!
+					</p>
+					<div class="author-info">
+						<img
+							src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=80&q=80"
+							alt="Maria" />
+						<span class="author-name">Maria, Mexico</span>
+					</div>
+				</div>
+				<div class="testimonial-card">
+					<div class="stars">★★★★★</div>
+					<p>
+						Personalized and competent support. They took care of my son’s case
+						promptly after other agencies refused due to complexity. Highly
+						recommended!
+					</p>
+					<div class="author-info">
+						<img
+							src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=80&q=80"
+							alt="Paulo" />
+						<span class="author-name">Paulo, Brazil</span>
+					</div>
+				</div>
+				<div class="testimonial-card">
+					<div class="stars">★★★★★</div>
+					<p>
+						Larissa provided reassurance and clear guidance when we felt lost.
+						She’s efficient and truly understands the immigration landscape. I
+						highly recommend the team.
+					</p>
+					<div class="author-info">
+						<img
+							src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80"
+							alt="Danielle" />
+						<span class="author-name">Danielle, France</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="next-steps reveal">
+			<h2>Our Process: Next Steps</h2>
+			<div class="timeline">
+				<div class="timeline-step" data-step="1">
+					<h3>Book a Consultation</h3>
+					<p>
+						Schedule your initial appointment to discuss your goals and
+						eligibility.
+					</p>
+				</div>
+				<div class="timeline-step" data-step="2">
+					<h3>Assessment & Strategy</h3>
+					<p>
+						We assess your profile and outline possible immigration pathways.
+					</p>
+				</div>
+				<div class="timeline-step" data-step="3">
+					<h3>Documentation</h3>
+					<p>
+						Gather the required documents with our guidance to support your
+						application.
+					</p>
+				</div>
+				<div class="timeline-step" data-step="4">
+					<h3>Application Submission</h3>
+					<p>
+						We prepare and submit your application, ensuring accuracy and
+						completeness.
+					</p>
+				</div>
+				<div class="timeline-step" data-step="5">
+					<h3>Decision & Follow‑Up</h3>
+					<p>
+						We keep you informed throughout the decision process and assist with
+						next steps.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="news reveal" id="news">
+			<h2>Immigration News</h2>
+			<div class="news-grid">
+				<div class="news-card">
+					<img
+						src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+						alt="Best Provinces for Newcomers" />
+					<div class="news-body">
+						<h3>Best Provinces for Newcomers</h3>
+						<p>
+							Discover where immigrants thrive in Canada! Learn which provinces
+							have the highest retention rates.
+						</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+				<div class="news-card">
+					<img
+						src="https://images.unsplash.com/photo-1485211042162-1255f2c7c5bc?auto=format&fit=crop&w=800&q=80"
+						alt="Hiring Foreign Workers with a LMIA" />
+					<div class="news-body">
+						<h3>Hiring Foreign Workers with a LMIA</h3>
+						<p>
+							Learn about the Labour Market Impact Assessment (LMIA) and how it
+							enables employers to hire foreign workers.
+						</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+				<div class="news-card">
+					<img
+						src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80"
+						alt="Provincial Nominee Program" />
+					<div class="news-body">
+						<h3>Provincial Nominee Program (PNP)</h3>
+						<p>
+							Explore how PNP helps skilled workers settle in Canada and obtain
+							permanent residence.
+						</p>
+						<a href="#">Read more</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Newsletter sign up call -->
+			<div class="newsletter reveal">
+				<p>
+					Get weekly insider updates on Canadian immigration – join our free
+					newsletter.
+				</p>
+				<form class="newsletter-form" action="#" method="POST">
+					<input
+						type="email"
+						name="email"
+						placeholder="Your email address"
+						required />
+					<button type="submit">Subscribe</button>
+				</form>
+			</div>
+		</section>
+
+		<footer id="contact">
+			<div class="footer-cta">
+				<h3>Ready to start your journey?</h3>
+				<p>
+					Book a free call today and let’s build your Canadian dream together.
+				</p>
+				<a
+					href="https://upmmigrationconsultation.as.me/?appointmentType=59225498"
+					class="btn-footer"
+					>Book a Free Call</a
+				>
+			</div>
+			<div class="footer-content">
+				<div class="footer-column">
+					<h4>Services</h4>
+					<ul>
+						<li><a href="#services">Immigrate</a></li>
+						<li><a href="#services">Work</a></li>
+						<li><a href="#services">Study</a></li>
+						<li><a href="#services">Sponsor</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h4>Social</h4>
+					<ul>
+						<li><a href="https://instagram.com">Instagram</a></li>
+						<li><a href="https://facebook.com">Facebook</a></li>
+						<li><a href="https://wa.me/16045551234">WhatsApp</a></li>
+						<li><a href="https://linkedin.com">LinkedIn</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h4>Company</h4>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h4>Contact</h4>
+					<ul>
+						<li>+1 (672) 588-1360</li>
+						<li>
+							<a href="mailto:info@upimmigration.ca">info@upimmigration.ca</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				© Up Immigration Consulting. All rights reserved.
+			</div>
+		</footer>
+
+		<!-- Reveal on scroll observer -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const reveals = document.querySelectorAll(".reveal");
+				const observer = new IntersectionObserver(
+					function (entries) {
+						entries.forEach(function (entry) {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("revealed");
+							}
+						});
+					},
+					{ threshold: 0.1 }
+				);
+				reveals.forEach(function (el) {
+					observer.observe(el);
+				});
+
+				// Testimonials slider
+				const testimonialCards = document.querySelectorAll(
+					".testimonial-slider .testimonial-card"
+				);
+				let currentTestimonial = 0;
+				function showTestimonial(index) {
+					testimonialCards.forEach(function (card, i) {
+						if (i === index) {
+							card.classList.add("active");
+						} else {
+							card.classList.remove("active");
+						}
+					});
+				}
+				if (testimonialCards.length > 0) {
+					showTestimonial(0);
+					setInterval(function () {
+						currentTestimonial =
+							(currentTestimonial + 1) % testimonialCards.length;
+						showTestimonial(currentTestimonial);
+					}, 6000);
+				}
+
+				// Counter animation for numbers
+				const counterElements = document.querySelectorAll(".count");
+				const counterObserver = new IntersectionObserver(
+					function (entries, obs) {
+						entries.forEach(function (entry) {
+							if (entry.isIntersecting) {
+								const el = entry.target;
+								const target = parseInt(el.getAttribute("data-target")) || 0;
+								let count = 0;
+								const increment = Math.max(1, target / 60);
+								function updateCount() {
+									count += increment;
+									if (count >= target) {
+										el.textContent = target;
+									} else {
+										el.textContent = Math.ceil(count);
+										requestAnimationFrame(updateCount);
+									}
+								}
+								updateCount();
+								obs.unobserve(el);
+							}
+						});
+					},
+					{ threshold: 1.0 }
+				);
+				counterElements.forEach(function (counter) {
+					counterObserver.observe(counter);
+				});
+
+				// Typewriter effect for hero headline
+				const typedSpan = document.getElementById("typed-word");
+				if (typedSpan) {
+					const words = [
+						"Move to Canada",
+						"Visit Canada",
+						"Study in Canada",
+						"Stay in Canada",
+						"Work in Canada",
+						"Immigrate to Canada",
+					];
+					let wordIndex = 0;
+					let letterIndex = 0;
+					let typing = true;
+					function typeLoop() {
+						const currentWord = words[wordIndex];
+						if (typing) {
+							if (letterIndex <= currentWord.length) {
+								typedSpan.textContent = currentWord.substring(0, letterIndex);
+								letterIndex++;
+								setTimeout(typeLoop, 120);
+							} else {
+								typing = false;
+								setTimeout(typeLoop, 1600);
+							}
+						} else {
+							if (letterIndex >= 0) {
+								typedSpan.textContent = currentWord.substring(0, letterIndex);
+								letterIndex--;
+								setTimeout(typeLoop, 60);
+							} else {
+								typing = true;
+								wordIndex = (wordIndex + 1) % words.length;
+								setTimeout(typeLoop, 200);
+							}
+						}
+					}
+					typeLoop();
+				}
+
+				// 3D tilt effect for service cards
+				const serviceCards = document.querySelectorAll(".service-card");
+				serviceCards.forEach(function (card) {
+					card.addEventListener("pointermove", function (e) {
+						const rect = card.getBoundingClientRect();
+						const x = e.clientX - rect.left - rect.width / 2;
+						const y = e.clientY - rect.top - rect.height / 2;
+						const rotateX = (-y / (rect.height / 2)) * 6;
+						const rotateY = (x / (rect.width / 2)) * 6;
+						card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+					});
+					card.addEventListener("pointerleave", function () {
+						card.style.transform = "";
+					});
+				});
+
+				// Highlight timeline steps on scroll
+				const timelineSteps = document.querySelectorAll(".timeline-step");
+				const stepObserver = new IntersectionObserver(
+					function (entries) {
+						entries.forEach(function (entry) {
+							if (entry.isIntersecting) {
+								timelineSteps.forEach(function (step) {
+									step.classList.remove("active");
+								});
+								entry.target.classList.add("active");
+							}
+						});
+					},
+					{ root: null, rootMargin: "-50% 0px -40% 0px", threshold: 0.1 }
+				);
+				timelineSteps.forEach(function (step) {
+					stepObserver.observe(step);
+				});
+			});
+		</script>
+
+		<div class="whatsapp">
+			<a href="https://wa.me/16045551234" aria-label="Contact us on WhatsApp">
+				<svg viewBox="0 0 32 32">
+					<path
+						d="M16 0a16 16 0 00-13.59 24.74L0 32l7.41-2.4A16 16 0 1016 0zm8.58 24.05a2.33 2.33 0 01-1.51 1.06c-.41.09-.82.18-1.27.27a7.71 7.71 0 01-3.33-.55 14.2 14.2 0 01-5.29-3.29A14.64 14.64 0 017.9 14a17.5 17.5 0 01-.66-4.74 7.5 7.5 0 01.2-2.66 2.4 2.4 0 011.28-1.6 2 2 0 011.34-.17c.4.08.82.22 1.22.35a13.69 13.69 0 012.74 1.13 2.46 2.46 0 011.02 1.33 5.2 5.2 0 01-.28 1.88c-.09.23-.19.47-.28.71a.43.43 0 000 .28c.14.38.3.75.45 1.12a4.44 4.44 0 002.81 2.61c.23.08.47.16.7.24a1.52 1.52 0 001.75-.55c.15-.2.3-.4.45-.59.23-.3.51-.36.86-.22.4.16.8.33 1.2.5a4.6 4.6 0 013 3.48c.24.7.13 1.39-.3 2.03z" />
+				</svg>
+			</a>
+		</div>
+	</body>
+</html>

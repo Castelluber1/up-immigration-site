@@ -1,0 +1,115 @@
+<style>
+	/* Triângulo custom para <summary> no FAQ */
+	#faq .faq summary {
+		list-style: none; /* remove marcador nativo */
+		position: relative;
+		padding-left: 28px; /* espaço pro ícone */
+		font-weight: 700;
+		cursor: pointer;
+	}
+	#faq .faq summary::-webkit-details-marker {
+		display: none;
+	} /* Safari/Chrome */
+
+	/* ícone: triângulo apontando para a direita */
+	#faq .faq summary::before {
+		content: "";
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 0;
+		height: 0;
+		border-top: 6px solid transparent;
+		border-bottom: 6px solid transparent;
+		border-left: 8px solid var(--dark); /* cor do triângulo */
+		transition: transform 0.2s ease;
+	}
+
+	/* quando aberto, gira o triângulo (aponta para baixo) e pode trocar a cor */
+	#faq .faq details[open] > summary::before {
+		transform: translateY(-50%) rotate(90deg);
+		border-left-color: var(--brand);
+	}
+
+	.faq {
+		display: grid;
+		gap: 12px;
+	}
+	.faq details {
+		border: 1px solid #eee;
+		border-radius: var(--radius);
+		padding: 14px 16px;
+		background: #fff;
+	}
+	.faq summary {
+		cursor: pointer;
+		font-weight: 700;
+	}
+	.faq p {
+		margin: 10px 0 0;
+		color: var(--muted);
+	}
+</style>
+<section id="faq">
+	<div class="container">
+		<h2 class="center">Perguntas frequentes</h2>
+		<div class="faq">
+			<details>
+				<summary>Quem pode patrocinar?</summary>
+				<p>
+					Cidadãos canadenses e residentes permanentes com 18+ anos, sem
+					inadmissibilidades e com intenção de viver no Canadá com a pessoa
+					patrocinada.
+				</p>
+			</details>
+			<details>
+				<summary>União estável vale para patrocínio conjugal?</summary>
+				<p>
+					Depende das provas de convivência e do contexto do relacionamento. Na
+					consulta alinhamos o que costuma ajudar a demonstrar relação genuína.
+				</p>
+			</details>
+			<details>
+				<summary>Quanto tempo leva?</summary>
+				<p>
+					O prazo depende da fila e do ritmo de análise do governo. Na consulta,
+					estimamos com base no cenário atual e orientamos estratégias para você
+					trabalhar enquanto aguarda a decisão.
+				</p>
+			</details>
+			<details>
+				<summary>Posso trabalhar ou estudar enquanto aguardo?</summary>
+				<p>
+					A maioria dos casos sim mas isso depende do seu status e da via
+					escolhida. Avaliamos cenários na consulta e explicamos opções
+					possíveis.
+				</p>
+			</details>
+			<details>
+				<summary>O que eu preciso provar?</summary>
+				<p>
+					Voce precisa provar a legitmidade do relacrionamento, nós recomendamos
+					que você evite checklists genéricos. Te entregaremos uma lista
+					objetiva e personalizada para maximizar suas chances de sucesso.
+				</p>
+			</details>
+			<details>
+				<summary>Posso patrocinar se estou fora do Canadá?</summary>
+				<p>
+					Cidadãos canadenses podem, comprovando plano real de retorno ao
+					Canadá. Residentes permanentes devem, via de regra, estar no Canadá.
+				</p>
+			</details>
+			<details>
+				<summary>Quais erros mais comuns</summary>
+				<p>
+					Documentação incompleta, provas fracas, formulários desatualizados e
+					inconsistências em datas e histórico. Nosso fluxo tem checagens
+					sucessivas para evitar esses erros e elevar a qualidade da sua
+					aplicação.
+				</p>
+			</details>
+		</div>
+	</div>
+</section>

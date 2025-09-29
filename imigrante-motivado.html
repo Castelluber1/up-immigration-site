@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			:root {
+				--brand: #b8001c;
+				--brand-light: #d33541;
+				--dark: #0a0c0f;
+				--light: #ffffff;
+				--gray: #f7f8fa;
+				--muted: #62656f;
+				--radius: 12px;
+			}
+
+			/* Reset / base */
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: "Poppins", sans-serif;
+				color: var(--dark);
+				background: var(--light);
+			}
+			section {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.bg-light-grey {
+				background: #f3f3f3;
+			}
+
+			/* Container */
+			.mw900 {
+				max-width: 900px;
+				place-self: center;
+				padding: 0;
+				margin: 0 auto;
+			}
+
+			/* Headings */
+			h2 {
+				text-align: center;
+				font-size: clamp(2rem, 3.6vw, 3.1rem);
+			}
+			.subpage {
+				font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+				text-align: center;
+			}
+			.pb20 {
+				padding-bottom: 20px;
+			}
+			.subtitle {
+				text-align: center;
+				color: var(--muted);
+				max-width: 720px;
+				margin: 0 auto 10px;
+			}
+
+			/* Form */
+			.question-form {
+				width: 100%;
+				max-width: 600px;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 15px;
+				padding-bottom: 15px;
+			}
+			.question-form input,
+			.question-form textarea,
+			.question-form select {
+				width: 100%;
+				padding: 12px 15px;
+				border-radius: var(--radius);
+				border: 1px solid #ccc;
+				font-size: 1rem;
+				resize: vertical;
+				background: #fff;
+				color: #62656f;
+			}
+
+			.question-form .btn-primary {
+				width: 100%;
+				padding: 14px 0;
+				font-size: 1.1rem;
+				border: none;
+				border-radius: var(--radius);
+				background: var(--brand);
+				color: var(--light);
+				cursor: pointer;
+				transition: background 0.3s ease;
+			}
+			.question-form .btn-primary:hover {
+				background: var(--brand-light);
+			}
+
+			/* Status */
+			#formMessage {
+				margin-top: 15px;
+				text-align: center;
+				font-size: 1rem;
+			}
+
+			/* ===== MOBILE FRIENDLY ===== */
+
+			/* evita zoom no iOS ao focar */
+			.question-form input,
+			.question-form select,
+			.question-form textarea,
+			.question-form button {
+				font-size: 16px;
+			}
+
+			/* tablets/celulares */
+			@media (max-width: 900px) {
+				section.bg-light-grey {
+					padding: 48px 16px;
+				}
+				.mw900 {
+					max-width: 100%;
+					padding: 0;
+					margin: 0 auto;
+				}
+				.question-form {
+					max-width: 100%;
+					gap: 12px;
+				}
+				.question-form .btn-primary {
+					padding: 16px 0;
+				}
+			}
+
+			/* <=768px */
+			@media (max-width: 768px) {
+				h2,
+				.subpage {
+					text-align: center;
+				}
+				.subtitle {
+					margin: 0 auto 12px;
+					line-height: 1.45;
+					padding: 0 4px;
+				}
+			}
+
+			/* phones */
+			@media (max-width: 480px) {
+				h2,
+				.subpage {
+					font-size: clamp(1.6rem, 6vw, 2.2rem);
+				}
+				.question-form {
+					padding-bottom: 96px;
+				} /* espaço pro botão flutuante (WhatsApp) */
+				.question-form input,
+				.question-form select,
+				.question-form textarea {
+					padding: 14px;
+				}
+				.question-form label {
+					font-weight: 500;
+				}
+				section.bg-light-grey {
+					padding: 28px 14px;
+				}
+			}
+
+			/* safe areas (notch) */
+			@supports (padding: max(0px)) {
+				section.bg-light-grey {
+					padding-left: max(14px, env(safe-area-inset-left));
+					padding-right: max(14px, env(safe-area-inset-right));
+				}
+			}
+		</style>
+
+		<body>
+			<section class="bg-light-grey credential" id="client-intake">
+				<div class="mw900">
+					<h2 class="subpage">Up Immigration e Imigrante Motivado</h2>
+					<p class="subtitle pb20">
+						Clareza no caminho e foco no resultado para o seu Plano Canadá.
+					</p>
+
+					<form
+						id="intakeForm"
+						action="https://docs.google.com/forms/d/e/1FAIpQLSdnIwCPjz36JiHOHgXBU1ns1o_iktI3zsiB5qytm1CUMqv78Q/formResponse"
+						method="POST"
+						target="gform_iframe"
+						class="question-form">
+						<!-- Honeypot -->
+						<input
+							type="text"
+							name="hp_field"
+							tabindex="-1"
+							autocomplete="off"
+							style="position: absolute; left: -9999px"
+							aria-hidden="true" />
+
+						<!-- Email (Collect email) -->
+						<input
+							type="email"
+							name="emailAddress"
+							placeholder="Email"
+							required
+							autocomplete="email" />
+
+						<!-- Nome Completo -->
+						<input
+							type="text"
+							name="entry.1101738877"
+							placeholder="Nome Completo"
+							required
+							autocomplete="name" />
+
+						<!-- Onde você está atualmente? (agora como dropdown) -->
+
+						<!-- <label for="onde">Onde você está atualmente?</label> -->
+						<select id="onde" name="entry.1744797124" required>
+							<option value="" selected disabled>
+								Onde você está atualmente?
+							</option>
+							<option>Brasil</option>
+							<option>Canada</option>
+							<option>US</option>
+							<option>Outro</option>
+						</select>
+
+						<!-- Telefone - WhatsApp -->
+						<input
+							type="text"
+							name="entry.697319256"
+							placeholder="Telefone - WhatsApp"
+							autocomplete="tel" />
+
+						<!-- Como podemos te ajudar? -->
+						<input
+							type="text"
+							name="entry.1798830693"
+							placeholder="Como podemos te ajudar?" />
+
+						<select id="focus" name="entry.203409995" required>
+							<option value="" selected disabled>
+								Em que quer focar primeiro?
+							</option>
+							<option>Consulta de Imigração para saber se sou elegível</option>
+							<option>Visto de Turismo</option>
+							<option>Visto de Estudo</option>
+							<option>Visto de Trabalho - Conjuge estudando no Canadá</option>
+							<option>Permanent Residence - Já sou Elegível</option>
+							<option>PGWP - Estou concluindo meu estudo no Canadá</option>
+							<option>
+								Patrocínio Conjugal - Em relacionamento com Canadense
+							</option>
+							<option>LMIA - Meu empregador vai me ajudar</option>
+							<option>Não sei ainda, preciso de ajuda</option>
+						</select>
+
+						<!-- Tokens do Forms -->
+						<input type="hidden" name="fvv" value="1" />
+						<input type="hidden" name="pageHistory" value="0" />
+						<input type="hidden" name="fbzx" id="fbzx" />
+
+						<button type="submit" class="btn-primary">Enviar</button>
+					</form>
+
+					<div id="formMessage" role="status" aria-live="polite"></div>
+
+					<script>
+						const form = document.getElementById("intakeForm");
+						const msg = document.getElementById("formMessage");
+						const btn = form.querySelector('button[type="submit"]');
+
+						// token único por envio
+						const refreshFbzx = () =>
+							(document.getElementById("fbzx").value = String(Date.now()));
+						refreshFbzx();
+
+						form.addEventListener("submit", async (e) => {
+							e.preventDefault();
+
+							// honeypot
+							if (form.querySelector('[name="hp_field"]').value) return;
+
+							const original = btn.textContent;
+							btn.disabled = true;
+							btn.textContent = "Enviando…";
+							msg.textContent = "";
+
+							try {
+								const fd = new FormData(form);
+								await fetch(form.action, {
+									method: "POST",
+									body: fd,
+									mode: "no-cors",
+								});
+								msg.textContent = "✅ Recebido! Obrigado.";
+								form.reset();
+								refreshFbzx();
+							} catch {
+								msg.textContent = "⚠️ Falha no envio. Tente novamente.";
+							} finally {
+								btn.disabled = false;
+								btn.textContent = original;
+							}
+						});
+					</script>
+
+					<br />
+					<br />
+					<br />
+				</div>
+			</section>
+		</body>
+	</body>
+</html>
